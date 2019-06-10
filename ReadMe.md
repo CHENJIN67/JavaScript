@@ -5,5 +5,6 @@ This is a repository which records the way of learning JavaScript.
     I coded the examples by myself for training and it's easy but my first step.
     
     
-#Come on!
+Come on!
+---
     
