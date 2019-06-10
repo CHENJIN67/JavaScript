@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<script type="text/javascript">
+		//1.
+		var a=123;
+		function fun1(){
+			alert(a);		//自己域找不到，向外找
+		}
+		fun1();			//123
+
+		//2.
+		var b=123;
+		function fun2(){
+			alert(b);
+			var b=456;
+		}
+		fun2();				//undefined
+		alert(b);			//123
+
+		//3.
+		var c=123;
+		function fun3(){
+			alert(c);
+			c=345;
+		}
+		fun3();				//123
+		alert(c);			//345
+
+		//4.
+		var d=123;
+		function fun4(d){
+			alert(d);
+			d=456;
+		}
+		fun4();				//undefined,因为形参等于声明了变量,但没有赋值
+		alert(d);			//123,此d为全局作用域的，因为函数里的d已经声明了(相当于var)
+
+		//5.
+		var e=123;
+		function fun5(e){
+			alert(e);
+			e=456;
+		}
+		fun5(123);			//123
+		alert(e);			//123
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

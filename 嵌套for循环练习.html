@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>嵌套for循环练习</title>
+	<script type="text/javascript">
+		/*打印99乘法表*/
+		for (var i=1; i<10; i++) {				//创建高度
+			for (var j=1; j<i+1; j++) {			//创建宽度
+				document.write("<span>"+j+"*"+i+"="+i*j+"</span>");	//将每个计算式放入span标签，使其可以进行大小的控制；
+			}
+			document.write("<br/>");
+		}
+
+	</script>
+	<style type="text/css">						/*创建span标签的css控制*/
+		span {
+			display: inline-block;				/*将span标签变为inline-block(行块)*/
+			width: 90px;
+			height: 40px;
+			font-size: 20px;
+			font-weight: bold;
+		}
+	</style>
+</head>
+<body>
+	
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>if语句</title>
+	<script type="text/javascript">
+		/*
+		流程控制语句
+			-JS中程序是从上而下执行；
+			-通过流程控制语句可以控制执行语句
+			-语句的分类
+				1.条件判断语句
+				2.条件分支语句
+				3.循环语句
+
+
+		条件判断语句：
+		-if(条件表达式)
+			语句
+
+		 1.在执行时，会对条件表达式进行求值判断；
+		 如果条件表达式为true，则执行if后的语句；
+		 如果为false，则不会执行；
+		 2.if只能控制紧接着的alert，第二个alert不受控制；
+		 	如果希望if可以控制多条语句，可以使用代码块；
+		*/
+
+		//只有在true时才执行；
+		var a=10;
+		if (a>9)
+			
+				console.log("right");
+				console.log("again");
+			//会同时控制，要么同时发生，要么都不发生；
+
+		var b=20;
+		if(b>10&&b<=20)
+		{
+			console.log("a大于10，并且小于20");
+		}//可以使用&&或者||进行更加复杂的范围控制
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

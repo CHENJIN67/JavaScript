@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>原型</title>
+	<script type="text/javascript">
+		function Myclass(){
+
+		}
+		Myclass.prototype.name="我是原型中的name";
+		var class1=new Myclass();
+		class1.age=2013;
+		//console.log(class1.name);
+		console.log("name" in class1);//对象中没有，原型中有还是会返回true
+		//使用hasOwnProperty()来检查内部是否有这个函数；
+		console.log(class1.hasOwnProperty("name"));
+		console.log(class1.hasOwnProperty("age"));
+		console.log(class1.hasOwnProperty("hasOwnProperty"));	//自身没有
+		console.log(class1.__proto__.hasOwnProperty("hasOwnProperty"));//false,原型也没有
+
+		/*
+		原型对象也有原型
+			当我们使用一个对象的属性时，会先在自身中寻找
+			1.如果自身中有，则直接使用
+			2.如果没有，则在原型中找，然后使用
+				如果原型中也没有，则去原型的原型中寻找；
+		*/
+		console.log(class1.__proto__.__proto__.hasOwnProperty("hasOwnProperty"));		//true
+		console.log(class1.__proto__.__proto__.__proto__);
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>break和continue</title>
+	<script type="text/javascript">
+		/*
+		break可以退出switch或循环语句,不能用于if
+		break只对靠自己最近的语句起作用；
+		*/
+
+		/*
+		可以为语句创建label
+		laber:循环语句
+		*/	
+		// outer:
+		// for (var i=0; i<5; i++) {
+		// 	document.write("外层循环："+i+"&nbsp;&nbsp;");
+		// 	for (var j=0; j<5; j++) {
+		// 		document.write("内层循环："+j);
+		// 		break outer;
+		// 	}
+		// 	document.write("<br>");
+		// }
+
+
+		for (var j=0; j<5; j++) {
+							//跳过当次循环,默认只会对最近的循环起作用；
+			document.write(j+"<br>");
+		}
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

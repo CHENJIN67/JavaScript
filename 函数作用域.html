@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>函数作用域</title>
+	<script type="text/javascript">
+		/*
+		函数作用域
+			-调用函数时创建作用域，函数执行完无意义；
+			-每调用一次函数就会创建一个新的函数表达式，之间是相互的；
+			-函数作用域可以访问到全局作用域的变量；
+			-当函数作用域操作变量，会现在自身作用域中寻找，如果有直接用；没有则去上一级找；
+			-可以使用window函数，调用全局变量；
+			
+		定义形参则代表声明了一个变量；
+		*/
+		var a=1;
+		function fun(){
+			console.log(a);
+		}
+		fun();			//1； 函数可以访问全局；
+
+		// function fun2(){
+		// 	b=1;
+		// }
+		// console.log(b);//b is not defined;全部无法访问到函数作用域的变量；
+
+
+		var c="我是全局变量的c";
+		function fun3(){
+			var c="我是函数中的c";
+			console.log(window.c);			//如果想输出全局作用域中的c;加 window.
+		}
+		fun3();
+		console.log(c);
+
+
+		//
+		var d=33;
+		function fun5(){
+			e=10;			//不var 就是全局的；
+			console.log(d);
+		}
+		
+		fun5();
+		console.log(e);
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

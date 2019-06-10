@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>返回值的类型</title>
+	<script type="text/javascript">
+
+		/*
+		返回值可以是任意值
+		*/
+		function fun(){
+			alert("函数要执行了");
+
+			for (var i=0; i<5; i++){
+				if(i==2){
+					return;				//return执行，后面的语句都不执行
+				}
+				console.log(i);
+			}
+			alert("执行完了");
+		}
+		fun();
+
+		/*
+		返回值是一个对象
+		*/
+		function fun2(){
+			return {name:"chen"};
+		}
+		var a=fun2();
+		console.log("a="+a.name);
+
+		/*
+		返回值是一个函数
+		*/
+		function fun3(){
+			//在函数内部再声明一个函数
+			function fun4(){
+				alert("我是函数4");
+			}
+			return fun4;			
+			//需要先调用fun4；
+			//fun4()则调用函数的最终结果(输出"我是函数4")；
+			//fun4则调用函数的表达式：function fun4(){
+			//							alert("我是函数4");
+			//						}
+			//					
+		}
+		a=fun3();
+		fun3()();
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

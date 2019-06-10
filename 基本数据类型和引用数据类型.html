@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>基本数据类型和引用数据类型</title>
+	<script type="text/javascript">
+		/*
+		基本数据类型：string number boolean null undefined
+
+		引用数据类型：object
+
+		JS中的变量都是保存到栈内存中，
+			基本数据类型直接存在栈内存中
+			引用数据类型存在堆内存中
+
+		*/
+		var a=123;
+		var b=a;
+		a++;
+
+		console.log(a);
+		console.log(b);
+
+		//
+		var obj=new Object();
+		obj.name="chen";
+
+		var obj2=obj;
+		console.log(obj2==obj); //两个变量完全相等；
+		//修改obj的name；
+		obj2=null;
+		console.log(obj);
+		console.log(obj2);
+
+		var obj3=new Object();
+		var obj4=new Object();
+
+		obj3.name="1995";
+		obj4.name="1995";
+		console.log(obj3==obj4);	//false,因为obj3和4是两个变量，采用了new object;
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

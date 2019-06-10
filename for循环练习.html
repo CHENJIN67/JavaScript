@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>for循环练习</title>
+	<script type="text/javascript">
+		/*打印1-100之间所有奇数之和
+		*/
+		// var total=0;
+		// for(var i=0; i<=100; i++) {
+		// 	if (i%2 !=0) {
+		// 		document.write(i +"<br>");
+		// 		total=total+i;
+		// 	}
+			
+		// }
+		// document.write(total)
+
+		/*打印1-100之间所有7的倍数的个数和总和*/
+		// var sum=0;
+		// for (var i=1, count=0; i<=100; i++) {
+		// 	if (i%7 ==0) {
+		// 		count=count+1;
+		// 		sum=sum+i;
+		// 		document.write(i+"<br>");
+		// 	}
+		// }
+		// document.write(count+"<br>")
+		// document.write(sum)
+
+		/*打印所有水仙花数：是指一个3位数，它的每个位上的数字的3次幂之和等于它本身*/
+		// var a=100;
+		// var b=parseInt(a/100);
+		// var c=parseInt((a-100*parseInt(a/100))/10);
+		// var d=a%10;
+
+		// document.write(a+"<br>");
+		// document.write(b+"<br>");
+		// document.write(c+"<br>");
+		// document.write(d+"<br>");
+
+		for (var i=100; i<1000; i++){
+			var a=parseInt(i/100);
+			var b=parseInt((i-100*a)/10);
+			var c=i%10;
+			if ((a*a*a+b*b*b+c*c*c) ==i) {
+				document.write(i+"<br>");
+			}
+		}
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

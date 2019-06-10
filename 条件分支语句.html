@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>条件分支语句</title>
+	<script type="text/javascript">
+		/*
+		条件分支语句也叫switch语句；
+		 语句：
+		 	switch(条件表达式) {
+				case 表达式：
+					语句...
+					break;
+				case 表达式：
+					语句...
+					break;
+				case 表达式：
+					语句...
+					break;
+				default:
+					语句...
+					break;
+		 	}
+		1.语法：只要第一个为true,则下面的都执行；需要加break使语句退出；
+		2.当所有case都为false，则执行default；
+		3.if和switch可以互相代替；
+		*/
+
+
+		var num=4;
+		switch(num) {
+			case 1:
+				console.log("一");
+				break;
+			case 2:
+				console.log("二");
+				break;
+			case 3:
+				console.log("二");
+				break;
+			default:
+				console.log("非法");
+				break;
+		}
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>实参可以是任意值</title>
+	<script type="text/javascript">
+		// function even(num){
+			//(num%2==0)直接是一个等式，
+			//如果为偶数，则num%2==0为true
+			//如果为奇数，则num%2==0为false
+		// 	return num%2==0;	
+		// }
+
+		// var result=even(5);
+		// console.log(result);
+
+		/*
+		定义一个函数，根据圆的半径计算圆的面积，并返回计算结果
+		*/
+		// function circle(r){
+		// 	s=Math.PI*r*r;
+		// 	return s;
+		// }
+		// var =area(4);
+		// console.log(area);
+
+		/*
+		创建一个函数，可以在控制台中输出一个人的信息
+			可以输出人的name age gender ...
+		*/
+		// function sayHello(name,age,gender,address){
+		// 	console.log("我是"+name+",今年我"+age+"岁了，我是一个"+gender+"的，我住在"+address);
+		// }
+		// sayHello("猪八戒","22","男","高老庄");
+
+		function sayHello(data){
+			console.log("我是"+data.name+"，今年我"+data.age+"岁了，我是一个"+data.gender+"的，我住在"+data.address+"。");
+		}
+		var person1={	
+			name:"孙悟空",
+			age:"5000",
+			gender:"男",
+			address:"花果山"
+		};
+
+		sayHello(person1);		
+
+		function copy(a){
+			a(person1);
+		}		
+		copy(sayHello);
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

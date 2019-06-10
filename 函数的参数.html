@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>函数的参数</title>
+	<script type="text/javascript">
+		/*
+		定义一个求和函数
+		*/
+		function sum(x,y){			//定义参数是、
+			console.log(x+y);
+		}
+
+		//调用函数时，确定参数的值
+		sum(2,3);
+
+		/*
+		调用函数时，解析器不会检查实参的类型
+		*/
+		sum(123,null);
+
+		/*调用函数时，解析器不会检查实参的数量
+			实参数量>形参，多余不会赋值
+			形参>实参，形参结果为underfined，最终结果为NaN
+		*/
+		sum(123,345,222);
+		sum(123);
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

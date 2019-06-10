@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>条件运算符</title>
+	<script type="text/javascript">
+		/*
+		条件运算符也叫三元运算符
+		 语句：
+		 		条件表达式？语句1：语句2；
+		 - 执行的流程：
+		 		条件运算符在执行时，首先对条件表达式进行求值，
+		 		如果该值为true，则执行语句1，并返回结果；
+		 		如果改值为false，则执行语句2，并返回结果；
+		 		如果判断语句不是boonlean值，会自动转换成boonlean然后进行判断；
+		 */
+
+		 //true?alert("语句1"):alert("语句2");
+
+		 var a=10;
+		 var b=20;
+		 var c=30;
+
+		 //进行比较使用
+		 //a>b?alert("a大"):alert("b大")
+
+		 //获取a和b中的最大值
+		 var max=a > b ? a : b;
+		 console.log("max="+max);
+
+		 //获取a b c中的最大值
+		 max=max > c ? max : c;
+		 console.log("max="+max);
+
+		 //比较a b c，先比较a和b，如果为true执行（a>c?a:c)，再接着比较a和c的值；如果为false执行（b>c?b:c)，再接着比较b和c的值；（不推荐，难以阅读）
+		 var max=a>b?(a>c?a:c):(b>c?b:c);
+		 console.log("max="+max);
+
+		 //" "表示布尔值为false;"hello"表示布尔值为true;
+		 ""?alert("语句1"):alert("语句2");//false
+		 "hello"?alert("语句1"):alert("语句2");//true
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>原型对象</title>
+	<script type="text/javascript">
+		/*
+		原型prototype
+			这个属性对应一个对象；
+		*/
+		
+		function Myclass(){
+
+		}
+		Myclass.prototype.a=123;		//myclass内的公共区域；不在全局作用域，而是在构造函数内；
+		var class1=new Myclass();
+		var class2=new Myclass();
+		class1.a="我是class1的a";
+		console.log(class1.a);
+		console.log(class2.a);
+		console.log(Person.prototype);
+
+		//对构造函数进行改进：
+		function Person(name,age,gender){
+			this.name=name;
+			this,age=age;
+			this.gender=gender;
+		}
+		Person.prototype.sayName=function(){
+			alert("hello，我是"+this.name);
+		}
+		var per1=new Person("孙悟空",20,"male");
+		var per2=new Person("猪八戒",18,"male");
+
+		per1.sayName();
+		per2.sayName();
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

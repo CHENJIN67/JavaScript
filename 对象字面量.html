@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>对象字面量</title>
+	<script type="text/javascript">
+		/*使用对象字面量来创建一个对象*/
+
+		var obj= {};		//创建对象
+		obj.name="li";
+		console.log(obj);
+
+		/*语法：
+			obj= {属性名：属性值，属性名：属性值，属性名：属性值...}
+
+			属性名可以加引号(如*&%HH这样的属性名)，也可以不加，建议不加；
+		*/
+		var obj2={
+			name:"chen",
+			age:24, 
+			gender:"male"};
+		console.log(obj2.name);
+
+		var obj3={
+			name:"chen",
+			age:{}, 
+			gender:true,
+			test:{name:"jin"}};		//里面嵌套一个对象
+		console.log(obj3);
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

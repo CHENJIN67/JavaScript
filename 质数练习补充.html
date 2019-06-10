@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>质数练习补充</title>
+	<script type="text/javascript">
+		//测试如下的程序性能
+		//在程序执行前，开启计时器
+		//console.time()可以用来开启一个计时器
+		//它需要一个字符串为参数，作为标识；
+		console.time("test")
+		for (var i=2; i<10000; i++) {
+			var flag=true;
+
+			//1 36
+			//2 18
+			//3 12
+			//4 9
+			//6 6
+			//取到6之后就开始重复，如果6之前都没有可以整除的，那之后也肯定没有，所以可以
+			//减少其运算次数，将j的大小进行调整，不用非要计算到i-1；
+			//Math.sqrt()对数值进行开根；
+			for (var j=2; j<=Math.sqrt(i); j++) {
+
+				if (i%j==0) {
+					flag=false;
+					break;				//利用break结束循环,可以调高运行速度；
+				}
+			}
+			if (flag) {
+				//document.write(i+"是质数"+"<br>")
+			}
+		}	
+		console.timeEnd("test");		//利用timeEnd()中值计时器
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

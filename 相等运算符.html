@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<!-- <script type="text/javascript" src="js/script.js"></script> -->
+	<script type="text/javascript">
+		/* ==
+		相等运算符
+		当使用==来比较值时，如果值的类型不同，则会自动进行类型转换，将其转换为相同的类型然后比较；
+		*/
+		var a=10;
+
+		//console.log(a==4);
+		//console.log("1"==1);
+		console.log(true=="1");//将"1"转换成boolean值true，然后比较。
+		console.log(true=="hello");
+		console.log(NaN=="0");//NaN不和任何值相等
+		console.log(NaN==NaN);//false
+		console.log(undefined==null);//undefined衍生自null，这两者做相等判断时会返回true;
+		
+		var b=NaN;
+		console.log(isNaN(b));//true;利用isNaN函数对值进行判断是否为NaN；
+
+		// !==
+		console.log(10!=5);//true;利用 ！=进行不相等计算；
+		console.log("1"!=1);//false;不相等也会进行自动类型转换，转换后类型相等会输出false
+
+		// === 
+		console.log("1"===1);//false;===全等计算，不进行类型转换；
+
+		// !==
+		console.log("1"!==1);//true; ！==不全等计算，不进行类型转换；
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

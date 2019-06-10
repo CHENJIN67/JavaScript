@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>构造函数修改</title>
+	<script type="text/javascript">
+		function Person(name,age,gender){
+			this.name=name;
+			this,age=age;
+			this.gender=gender;
+			this.sayName=fun;
+		}
+
+		
+		function fun(){					//将sayname提取出来
+			alert("大家好，我是"+this.name);
+		}
+
+		var per1=new Person("孙悟空",20,"male");
+		var per2=new Person("猪八戒",18,"male");
+		per1.sayName();
+		per2.sayName();
+
+		console.log(per1.sayName == per2.sayName);
+		//目前，我们的方法是在构造函数内部执行的，所有实例必须一样，
+		//这样就导致每次执行都创建一个sayname的方法，10000个name就创建10000个方法（this不一样）；
+
+		//将我们sayname放到全局作用域中
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

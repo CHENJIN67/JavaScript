@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>运算符的优先级</title>
+	<script type="text/javascript">
+		/*
+			,运算符
+			使用,可以分割多个语句，一般在声明多个变量时使用；
+
+			JS运算中也有优先级，例如先乘除后加减；
+
+			如果不清楚优先级，可以选用（ ）进行改变
+		*/
+
+		//作用一样
+		
+		// var a=1,b=2,c=3;
+		
+		// var a=1;
+		// var b=2;
+		// var c=3;
+		
+		//如果||的优先级高，或者两个一样高，则应该返回3；
+		//如果&&的优先级高，则返回1；
+		var a =1||2&&3;
+		console.log(a);//1
+		
+		//&&优先级比||高
+		var b =0||3&&4;
+		console.log(b);//4
+		var c =1||0&&4;
+		console.log(c);//1
+		var d =0||0&&4;
+		console.log(d);//0
+		var e =1||1&&0;
+		console.log(e);//1
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
